@@ -7,7 +7,7 @@ raspistill -w 640 -h 480 -q 75 -o /home/pi/voltage-upload/voltage.jpg
 sleep 2
 
 # Uploads the photo to the server
-scp -q -P 2223 -i /home/pi/.ssh/id_rsa_solar voltage.jpg acawley@solar.ashleycawley.co.uk:/home/acawley/solar.ashleycawley.co.uk &>/dev/null
+scp -q -P 2223 -i /home/pi/.ssh/id_rsa_solar /home/pi/voltage-upload/voltage.jpg acawley@solar.ashleycawley.co.uk:/home/acawley/solar.ashleycawley.co.uk
 
 # Exits
 exit 0
