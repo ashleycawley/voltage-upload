@@ -6,6 +6,7 @@ raspistill -w 640 -h 480 -q 75 -o /home/pi/voltage-upload/voltage.jpg
 # Pauses for 2 seconds
 sleep 2
 
+# Adds a date and timestamp to the image output
 for file in voltage.jpg ; do
    convert /home/pi/voltage-upload/"$file" -font Helvetica-Bold \
 -pointsize 34 -fill white -annotate +25+455  \
